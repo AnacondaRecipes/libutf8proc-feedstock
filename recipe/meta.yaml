@@ -20,7 +20,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - cmake
-    - make
+    - make   # [not win]
+    - m2-make   # [win]
   host:
 
 test:
