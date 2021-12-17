@@ -1,5 +1,5 @@
 {% set name = "libutf8proc" %}
-{% set version = "2.6.1" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/JuliaStrings/utf8proc/archive/v{{ version }}.tar.gz
-  sha256: 4c06a9dc4017e8a2438ef80ee371d45868bda2237a98b26554de7a95406b283b
+  sha256: 4bb121e297293c0fd55f08f83afab6d35d48f0af4ecc07523ad8ec99aa2b12a1
 
 build:
   number: 0
