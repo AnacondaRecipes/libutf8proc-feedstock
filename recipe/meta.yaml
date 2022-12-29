@@ -10,7 +10,7 @@ source:
   sha256: 4c06a9dc4017e8a2438ef80ee371d45868bda2237a98b26554de7a95406b283b
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # Appears to have pretty good compatibility.
     # ref: https://abi-laboratory.pro/?view=timeline&l=utf8proc
