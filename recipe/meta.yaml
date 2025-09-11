@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - cmake
+    - cmake >=3.10
     - make   # [not win]
     - m2-make   # [win]
   host:
