@@ -21,8 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - cmake >=3.10
-    - make   # [not win]
-    - m2-make   # [win]
+    - make
   host:
 
 test:
