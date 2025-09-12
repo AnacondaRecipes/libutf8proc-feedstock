@@ -1,5 +1,5 @@
 {% set name = "libutf8proc" %}
-{% set version = "2.6.1" %}
+{% set version = "2.11.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/JuliaStrings/utf8proc/archive/v{{ version }}.tar.gz
-  sha256: 4c06a9dc4017e8a2438ef80ee371d45868bda2237a98b26554de7a95406b283b
+  sha256: c24379b5fa0a429a1f9a3fc23b44a75f2b141a34c09146a529a55d20a5808070
 
 build:
-  number: 1
+  number: 0
   run_exports:
     # Appears to have pretty good compatibility.
     # ref: https://abi-laboratory.pro/?view=timeline&l=utf8proc
@@ -19,7 +19,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - cmake
+    - {{ stdlib('c') }}
+    - cmake >=3.10
     - make   # [not win]
     - m2-make   # [win]
   host:
