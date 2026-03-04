@@ -1,5 +1,5 @@
 {% set name = "libutf8proc" %}
-{% set version = "2.11.0" %}
+{% set version = "2.11.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/JuliaStrings/utf8proc/archive/v{{ version }}.tar.gz
-  sha256: c24379b5fa0a429a1f9a3fc23b44a75f2b141a34c09146a529a55d20a5808070
+  sha256: abfed50b6d4da51345713661370290f4f4747263ee73dc90356299dfc7990c78
 
 build:
   number: 0
@@ -21,19 +21,18 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - cmake >=3.10
-    - make   # [not win]
-    - m2-make   # [win]
+    - make  # [not win]
+    - m2-make  # [win]
   host:
 
 test:
   commands:
-    - test -f "${PREFIX}/include/utf8proc.h"                # [unix]
-    - test -f "${PREFIX}/lib/libutf8proc${SHLIB_EXT}"       # [unix]
-    - test ! -f "${PREFIX}/lib/libutf8proc.a"               # [unix]
-
-    - if not exist "%LIBRARY_INC%\utf8proc.h"    exit 1     # [win]
-    - if not exist "%LIBRARY_BIN%\utf8proc.dll"  exit 1     # [win]
-    - if not exist "%LIBRARY_LIB%\utf8proc.lib"  exit 1     # [win]
+    - test -f "${PREFIX}/include/utf8proc.h"  # [unix]
+    - test -f "${PREFIX}/lib/libutf8proc${SHLIB_EXT}"  # [unix]
+    - test ! -f "${PREFIX}/lib/libutf8proc.a"  # [unix]
+    - if not exist "%LIBRARY_INC%\utf8proc.h"    exit 1  # [win]
+    - if not exist "%LIBRARY_BIN%\utf8proc.dll"  exit 1  # [win]
+    - if not exist "%LIBRARY_LIB%\utf8proc.lib"  exit 1  # [win]
     - if exist "%LIBRARY_LIB%\utf8proc_static.lib"  exit 1  # [win]
 
 about:
