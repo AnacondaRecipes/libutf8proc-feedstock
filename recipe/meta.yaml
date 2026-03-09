@@ -1,5 +1,5 @@
 {% set name = "libutf8proc" %}
-{% set version = "2.11.0" %}
+{% set version = "2.11.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/JuliaStrings/utf8proc/archive/v{{ version }}.tar.gz
-  sha256: c24379b5fa0a429a1f9a3fc23b44a75f2b141a34c09146a529a55d20a5808070
+  sha256: abfed50b6d4da51345713661370290f4f4747263ee73dc90356299dfc7990c78
 
 build:
   number: 0
@@ -37,7 +37,7 @@ test:
     - if exist "%LIBRARY_LIB%\utf8proc_static.lib"  exit 1  # [win]
 
 about:
-  home: https://juliastrings.github.io/utf8proc/
+  home: https://juliastrings.github.io/utf8proc
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
@@ -45,7 +45,7 @@ about:
   description: |
     utf8proc is a small, clean C library that provides Unicode normalization,
     case-folding, and other operations for data in the UTF-8 encoding
-  doc_url: https://juliastrings.github.io/utf8proc/doc/
+  doc_url: https://juliastrings.github.io/utf8proc/doc
   dev_url: https://github.com/JuliaStrings/utf8proc
 
 extra:
