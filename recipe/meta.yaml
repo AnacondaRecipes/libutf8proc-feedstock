@@ -10,11 +10,12 @@ source:
   sha256: abfed50b6d4da51345713661370290f4f4747263ee73dc90356299dfc7990c78
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # Appears to have pretty good compatibility.
     # ref: https://abi-laboratory.pro/?view=timeline&l=utf8proc
-    - {{ pin_subpackage('libutf8proc', max_pin='x') }}
+    # soname change in 2.9.0
+    - {{ pin_subpackage('libutf8proc', max_pin='x.x') }}
 
 requirements:
   build:
