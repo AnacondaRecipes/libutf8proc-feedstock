@@ -23,7 +23,7 @@ requirements:
     - {{ stdlib('c') }}
     - cmake >=3.10
     - make   # [not win]
-    - m2-make   # [win]
+    - msys2-make   # [win]
   host:
 
 test:
